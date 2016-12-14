@@ -1,0 +1,618 @@
+@import 'options/mixins';
+@import 'options/colors';
+@import 'options/mediaqueries';
+
+body
+{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container
+{
+  width: 100%;
+  height: 100%;
+  background-color: $light-grey;
+  position: absolute;
+}
+
+/*******************************/
+/*******************************/
+/*******************************/
+
+.container .user-play
+{
+  width: 75%;
+  height: 70%;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  background: url('../img/background-N1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*******************************/
+/* SIDEBAR LEFT -- TEAM & SHOP */
+/*******************************/
+
+.container .sidebar
+{
+  width: 25%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: $grey;
+  border-right: solid 1px $dark-grey;
+}
+
+.container .sidebar .content
+{
+  width: 200px;
+  margin: auto;
+}
+
+.container .sidebar span a
+{
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.container .sidebar .nav-sidebar{
+  border-bottom: solid 5px $dark-grey;
+}
+
+.container .sidebar .nav-sidebar .content .menu-team
+{
+  color: $green;
+}
+
+.container .sidebar .nav-sidebar .content .menu-shop
+{
+  color: $yellow;
+}
+
+.container .sidebar .content span
+{
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  margin: 20px 5px 5px 10px;
+}
+
+.container .team-tab
+{
+  width: 100%;
+  height: calc(100% - 50px);
+  background: $grey;
+  margin: auto;
+  overflow-y: auto;
+}
+
+.container .sidebar .nav-sidebar .tab-active
+{
+  background: $dark-grey;
+  padding: 5px 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.container .character
+{
+  width: 300px;
+  height: 155px;
+  margin: 15px auto;
+  border-radius: 15px;
+  background: $dark-grey;
+}
+
+.container .character-info
+{
+  width: 40%;
+  text-align: center;
+  float: left;
+}
+
+.container .character-info span
+{
+  display: inline-block;
+  margin: 5px;
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 12px;
+  color: $light-grey;
+
+  &:nth-child(3)
+  {
+    font-size: 12px;
+    background: $grey;
+    border-radius: 15px;
+    padding: 7px 7px 5px 7px;
+  }
+}
+
+.container .character .character-info img
+{
+  width: 60px;
+  display: block;
+  margin:10px auto 5px;
+  border-bottom: solid 1px $light-grey;
+}
+
+.container .character .level-info
+{
+  width: 55%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+.container .character .level-info button
+{
+  width: 150px;
+  height: 60px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: solid 2px $grey;
+  font-family:'Proxima Nova';
+  font-weight: bold;
+  color: $grey;
+  text-transform: uppercase;
+  line-height: 20px;
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.50);
+}
+
+.container .character .level-info .bonus
+{
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 12px auto 0px;
+  background: $light-grey;
+  font-family:'Proxima Nova';
+  font-weight: bold;
+  color: $grey;
+  text-transform: uppercase;
+  padding-top: 7px;
+  position: relative;
+}
+
+.container .character .level-info .bonus-unlocked
+{
+  background: $green;
+}
+
+.container .character .level-info span
+{
+  margin-top: 12px;
+  display: inline-block;
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: $light-grey;
+}
+
+.container .action-button img
+{
+  width: 12px;
+  margin: 1px 0px 0px 0px;
+  border: none;
+}
+
+.container .character .level-info .unlocked
+{
+  background: $green;
+  cursor: pointer;
+}
+
+.container .character .level-info .locked
+{
+  background: $light-grey;
+}
+
+/*******************************/
+/*  MY CHARACTER PROGRESSION   */
+/*******************************/
+
+.container .progression
+{
+  width: 75%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  background: $grey;
+  border-top: solid 1px $dark-grey;
+}
+
+/*******************************/
+
+.container .progression .projects
+{
+  padding-left: 15px;
+  border-right: solid 1px $dark-grey;
+  display: inline-block;
+}
+
+.container .progression .projects .title span
+{
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: $blue;
+}
+
+.container .progression .projects .title img
+{
+  width: auto;
+  height: 16px;
+}
+
+.container .progression .projects .projects-list .project
+{
+  display: inline-block;
+  height: 80px;
+  width: 65px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container  .progression .projects .projects-list .project img
+{
+  height: 65px;
+  width: auto;
+  margin-bottom: -10px;
+}
+
+.container  .progression .projects .projects-list .project span
+{
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: $light-grey;
+}
+
+.container  .progression .projects .projects-list .project-active span
+{
+  padding: 5px 8px 3px 8px;
+  color: $blue;
+  background-color: $dark-grey;
+  border-radius: 8px;
+}
+
+/*******************************/
+/* MAIN CHARACTER */
+/*******************************/
+
+.container .progression .main-character
+{
+  height: auto;
+  padding-left: 15px;
+  padding-top: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.container .progression .main-character .title span
+{
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: $orange;
+}
+
+.container .progression .main-character .title img
+{
+  height: 16px;
+  width: auto;
+}
+
+/*******************************/
+/* MAIN CHARACTER INFORMATIONS */
+/*******************************/
+
+.container .progression .main-character-info
+{
+  width: 120px;
+  text-align: center;
+}
+
+.container .progression .main-character-info img
+{
+  width: auto;
+  height: 100px;
+  border-bottom: solid 1px $light-grey;
+  margin: 15px 0 5px 0;
+}
+
+.container .progression .main-character-info .main-character-name
+{
+  margin: 0px 5px 5px 5px;
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $light-grey;
+}
+
+/*******************************/
+/* MAIN CHARACTER RESSOURCES */
+/*******************************/
+
+.container .progression .main-character-ressources
+{
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  width: 150px;
+}
+
+.container .progression .main-character-ressources div
+{
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 15px;
+  background-color: $dark-grey;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.container .progression .main-character-ressources .level
+{
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $light-grey;
+}
+
+.container .progression .main-character-ressources .budget, .container .progression .main-character-ressources .salary
+{
+  color: $green;
+}
+
+.container .progression .main-character-ressources .renown
+{
+  color: $yellow;
+}
+
+.container .progression .main-character-ressources .renown img
+{
+  width: 11px;
+  border: none;
+}
+
+/*******************************/
+/* MAIN CHARACTER BONUS */
+/*******************************/
+
+.container .progression .main-character-bonus
+{
+  position: absolute;
+  top: 40px;
+  left: 320px;
+  width: 150px;
+}
+
+.container .progression .main-character-bonus div
+{
+  color: $light-grey;
+  font-family: 'Proxima Nova';
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 5px;
+}
+
+.container .progression .main-character-bonus table
+{
+  border-collapse: separate;
+  border-spacing: -5px 5px;
+}
+
+.container .progression .main-character-bonus tr
+{
+  margin: 10px 0px;
+}
+
+.container .progression .main-character-bonus td
+{
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+}
+
+.container .progression .main-character-bonus td img
+{
+  height: 25px;
+  width: 25px;
+}
+
+/*******************************/
+/* BURGER MENU */
+/*******************************/
+
+.burger_Animate{
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  cursor: pointer;
+  width: 34px;
+  height: 40px;
+  z-index: 3;
+
+  .burger_global{
+    border-top: 2px solid $dark-grey;
+    width: 100%;
+    position: absolute;
+
+    &.top_bun{
+      top: 0;
+      transition: transform 500ms ease, border 500ms ease;
+      transform-origin: left center;
+    }
+    &.center_bun{
+      top: 12px;
+      transition: opacity 0ms ease;
+    }
+    &.bottom_bun{
+      top: 24px;
+      transition: transform 500ms ease, border 500ms ease;
+      transform-origin: left center;
+    }
+  }
+
+  &.open{
+
+    .top_bun{
+      transform: rotate(45deg);
+    }
+    .center_bun{
+      opacity: 0;
+    }
+    .bottom_bun{
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/*******************************/
+/* CONTENT */
+/*******************************/
+
+.menu{
+  background: $grey;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  right: -300px;
+  flex-direction: column;
+  margin: auto;
+  position: fixed;
+  transition: all 0.3s ease-in;
+  z-index: 2;
+  font-family:'Proxima Nova';
+  border-left: solid 1px $dark-grey;
+
+  &.open{
+    right: 0px;
+  }
+  .storyTelling{
+    width: 300px;
+    height: 300px;
+    margin-left: 5%;
+    margin-top: 10%;
+    overflow-y: scroll;
+    font-family: 'Proxima Nova';
+
+    h2{
+      color: white;
+      margin-bottom: 3%;
+      margin-top: 3%;
+      font-size: 12px;
+    }
+    p{
+      color: white;
+      font-size: 10px;
+      margin-right: 15%;
+    }
+  }
+  .division{
+    width: 95%;
+    height: 2px;
+    background-color: $dark-grey;
+    margin: 20px auto;
+  }
+  .menu-section{
+    padding: 10px 10px 0px 10px;
+    border-bottom: solid 5px $dark-grey;
+
+    span{
+      display: inline-block;
+      width: 90px;
+      height: 35px;
+      text-align: center;
+      color: $light-grey;
+      font-family: 'Proxima Nova';
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 36px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    
+    .menu-section-active{
+      
+      background-color: $dark-grey;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+  }
+
+  /*** Help / Explaination ***/
+
+  .helpBox{
+    background-color: $light-grey;
+    margin: 15px auto;
+    width: 90%;
+    height: 100%;
+    margin-bottom: 2%;
+    position: relative;
+    align-items: stretch;
+    border-radius: 5px;
+    border: 1px solid $dark-grey;
+    
+    .dollar{
+      display: block;
+      h2{
+        font-size: 20px;
+        margin: 20px;
+        font-weight: bold;
+      }
+      p{
+        margin-left: 20px;
+      }
+      &.open{
+        display: block;
+      }
+    }
+    .people{
+      display: none;
+      h2{
+        font-size: 20px;
+        margin: 20px;
+        font-weight: bold;
+      }
+      p{
+        margin-left: 20px;
+      }
+      &.open{
+        display: block;
+      }
+    }
+    .about{
+      display: none;
+      h2{
+        font-size: 20px;
+        margin: 20px;
+        font-weight: bold;
+      }
+      p{
+        margin-left: 20px;
+      }
+      &.open{
+        display: block;
+      }
+    }
+  }
+}
